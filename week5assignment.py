@@ -44,13 +44,16 @@ def categorize_by_popularity(books, counts, popular_threshold):
 # print( categorize_by_popularity(books, counts, 120))
 
 def analyze_library_stock(initial_books, initial_counts, book_to_update, unpopular_threshold, popular_threshold):
-    books_copy = books[:]
-    counts_copy = counts[:]
+    books_copy = initial_books[:]
+    counts_copy = initial_counts[:]
    
    
     book_title, new_count = book_to_update
-    update_checkout_count(books_copy, counts_copy, book_title, new_count)
+    
 
+    if not update_checkout_count(books_copy, counts_copy, book_title, new_count):
+        print(f"Warning: Book '{book_title}' not found in the library.")
+    
 
     cleaned_books, cleaned_counts = remove_unpopular_books(books_copy, counts_copy, unpopular_threshold)
 
