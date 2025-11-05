@@ -14,13 +14,12 @@ def calculate_moving_average(data, window_size):
         result.append(average)
 
 
-    return result
-         
+        return result
+            
+            
         
-    
 
 print(calculate_moving_average([10, 20, 30, 40, 50], 3))
 print(calculate_moving_average([1, 2, 3, 4, 5], 2))
-
 print(calculate_moving_average([5, 10, 15], 5))
 print(calculate_moving_average([8, 12], 1))
