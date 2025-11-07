@@ -64,6 +64,6 @@ def analyze_library_stock(initial_books, initial_counts, book_to_update, unpopul
     return popular_books, regular_books
     
 popular, regular = analyze_library_stock(books, counts, update_info, unpopular_min, popular_min)
-
+print(f"# For Test Case 1, the variables should hold:")
 print(f"popular: {popular}")
 print(f"regular: {regular}")
